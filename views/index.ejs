@@ -4,7 +4,8 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+    <script src="//cdn.jsdelivr.net/ramda/0.19.1/ramda.min.js"></script>   
     <script src="/js/app.js"></script>   
     <script src="/js/jobsController.js"></script>   
     <script src="/js/jobView.js"></script>     
@@ -24,12 +25,12 @@
       </select>
     </form>
 
-    <section id="jobs-container" ng-controller="JobsController as job">
+    <section id="jobs-container" ng-controller="JobsController as jobCtrl">
       <button id="add-job">Add a Job</button>
       <ul>
         <job></job>
       </ul>
-      <button id="load-more">Load More</button>
+      <button id="load-more" ng-click="jobCtrl.nextPage()">Load More</button>
     </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
