@@ -1,4 +1,4 @@
-<li class="job">
+<li class="job" ng-repeat="job in jobCtrl.jobs">
 	<h3><a href="#">{{job.title}}</a></h3>
 	<p>at <strong>{{job.company}}</strong>, {{job.createdAt}}
 	<button class="upvote">Upvote</button>
